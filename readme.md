@@ -1,11 +1,12 @@
 ##  setup
 
-｀｀｀bash
+```bash
 $ cp .env.example .env
 $ composer install
 $ php artisan key:generate
 $ touch database/database.sqlite
-$ php artisan serve｀｀｀
+$ php artisan serve
+```
 
 ## DB Setup
 
