@@ -5,51 +5,69 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mukta:300,400,700">
+    <link rel="stylesheet" href="fonts/icomoon/style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/aos.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
     <style>
-        .cover{
-            background:url(../img/st.PNG);
-            background-size: cover;
-            text-shadow: 2px 2px 0 #000,
-            -2px 2px 0 #000,
-            2px -2px 0 #000,
-            -2px -2px 0 #000;
-        }
+
         .fon{
             font-family: 'Amatic SC', cursive;
         }
     </style>
 </head>
 <body>
-<header>
-    <div class="cover text-center text-white  py-5 ">
-        <h1 class="display-4 mb-4 font-weight-bold" >wagashi shop</h1>
-    </div>
-    <div class="container py-5 h2 text-secondary">
-        <nav>
-            <ul class="nav nav-pills nav-fill">
-                <li class="nav-item">
-                    <a class="nav-link active" href="/">HOME</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/cart/list">CART</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">LIST</a>
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item" href="/item/1">カステラ</a>
-                        <a class="dropdown-item" href="/item/2">ようかん</a>
-                        <a class="dropdown-item" href="/item/3">まんじゅう</a>
-                        <a class="dropdown-item" href="/item/4">どら焼き</a>
+
+    <div class="site-wrap">
+        <header class="site-navbar" role="banner">
+            <div class="site-navbar-top">
+                <div class="container">
+                    <div class="row align-items-center">
+
+
+                        <div class="col-6 col-md-4 order-2 order-md-1 site-search-icon text-left">
+                            <form action="/" method="GET">
+                                <span class="icon icon-search2"></span>
+                                <input type="text" class="form-control border-0" placeholder="Search">
+                               
+                            </form>
+                        </div>
+
+                        <div class="col-12 mb-3 mb-md-0 col-md-4 order-1 order-md-2 text-center">
+                            <div class="site-logo">
+                                <a href="/" class="js-logo-clone">Wagashi</a>
+                            </div>
+                        </div>
                     </div>
-                </li>
-            </ul>
+                </div>
+            </div>
+            <nav class="site-navigation text-right text-md-center" role="navigation">
+                <div class="container">
+                    <ul class="site-menu js-clone-nav d-none d-md-block">
+                        <li><a href="/">home</a></li>
+                        <li><a href="/cart/list">Cart</a></li>
+
+                        <li class="has-children">
+                            <a>list</a><ul class="dropdown">
+                                <li><a href="/item/1">カステラ</a></li>
+                                <li><a href="/item/2">ようかん</a></li>
+                                <li><a href="/item/3">まんじゅう</a></li>
+                                <li><a href="/item/4">どら焼き</a></li>
+
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
     </div>
-    </nav>
-    </div>
-</header>
+</body>
 <main>
     <section class="py-5">
         <h2 class="text-center mb-5">商品一覧</h2>
@@ -57,7 +75,7 @@
             <div class="">
                 <?php
                 foreach($items as $item): ?>
-                <div class="rounded float-left text-center">
+                <div class="rounded float-left text-center mx-2">
                     <?=$item->name?>
                     <br>
                     <img src="<?=$item->img?>"/>
@@ -68,10 +86,8 @@
             </div>
             <?php endforeach; ?>
         </div>
-        </div>
     </section>
-    </div>
-    </section>
+
 </main>
 <footer>
 </footer>

@@ -98,8 +98,10 @@ Route::get("/order/thanks",function(){
 
 Route::post("/order",function(){
 
+
+
     // ここで カートの中身をDBに保存する
-    DB::insert("INSERT into orders(name,address,tel,email,orders) VALUES (?,?,?,?,?)",[
+    DB::insert("INSERT into orders (name,address,tel,email,orders) VALUES (?,?,?,?,?)",[
         request()->get("name"),
         request()->get("address"),
         request()->get("tel"),
@@ -111,3 +113,4 @@ Route::post("/order",function(){
 
     return redirect("/order/thanks");
 });
+

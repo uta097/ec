@@ -13,7 +13,7 @@ class DatabaseSeeder extends Seeder
     {
         DB::insert("INSERT into items (name,img,description,price) VALUES (?,?,?,?)",[
             "カステラ",
-            "http://placehold.it/200x200&text=kasutera",
+            "https://cdn-ak.f.st-hatena.com/images/fotolife/b/b7015/20181119/20181119144242.jpg",
             "手作りならではの変わらぬおいしさをお届けします",
             "100"
         ]);
