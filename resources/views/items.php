@@ -72,25 +72,23 @@
     <section class="py-5">
         <h2 class="text-center mb-5">商品一覧</h2>
         <div class="container">
-            <div class="">
-                <?php
-                foreach($items as $item): ?>
-                <div class="rounded float-left text-center mx-2">
-                    <?=$item->name?>
-                    <br>
-                    <img src="<?=$item->img?>"/>
-                    <br>
-                    価格：<?=$item->price?>円
-                    <br>
-                    <a href="item/<?=$item->id?>" class="btn btn-info">詳しく見る</a> </div>
+            <div>
+
+            <?php
+            foreach($items as $item): ?>
+            <div class="card float-left m-3" style="width: 18rem;">
+                <img class="card-img-top" src="<?=$item->img?>" alt="Card image cap">
+                <div class="card-body">
+                    <p class="card-text"><a href="item/<?=$item->id?>"><?=$item->name?></a><br><?=$item->price?>円</p>
+                </div>
             </div>
             <?php endforeach; ?>
+            </div>
         </div>
     </section>
 
 </main>
-<footer>
-</footer>
+
 
 
 <!-- Optional JavaScript -->

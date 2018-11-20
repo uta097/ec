@@ -35,7 +35,6 @@
                         <form action="/" method="GET">
                             <span class="icon icon-search2"></span>
                             <input type="text" class="form-control border-0" placeholder="Search">
-                            <input type="submit" value="検索">
                         </form>
                     </div>
 
@@ -77,7 +76,7 @@
         <form action="/cart/add" method="post">
             <?= csrf_field()?>
             <input type="hidden" name="item_id" value="<?=$item->id?>">
-            <input type="submit" value="カートに追加" class="btn btn-info" ><br>
+            <input type="submit" value="カートに追加" class="btn btn-outline-secondary mx-2" ><br>
         </form>
     </div>
 </main>
