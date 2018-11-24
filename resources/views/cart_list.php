@@ -83,8 +83,9 @@ foreach($cartItems as $item): ?>
         <input type="hidden" name="item_id" value="<?=$item->id?>">
         <br>
         <div class="text-center">
-        <input type="submit" value="カートを全削除" class="btn btn-danger" ><br><br>
-            <a class="btn btn-info px-5" href="/order">購入画面に進む</a>
+
+        <input type="submit" value="カートを全削除" class="btn btn-outline-danger" ><br><br>
+            <a class="btn btn-outline-info px-5" href="/order">購入画面に進む</a>
         </div>
     </form>
 </main>

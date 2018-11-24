@@ -69,10 +69,10 @@
 </body>
 <main>
 <div class="text-center">
-    商品名：<?=$item->name?><br>
+    <?=$item->name?><br>
         <img src="<?=$item->img?>"/><br>
     価格：<?=$item->price?>円<br>
-    説明：<?=$item->description?><br>
+    <?=$item->description?><br>
         <form action="/cart/add" method="post">
             <?= csrf_field()?>
             <input type="hidden" name="item_id" value="<?=$item->id?>">

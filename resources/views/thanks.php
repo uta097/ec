@@ -20,6 +20,8 @@
         .fon{
             font-family: 'Amatic SC', cursive;
         }
+
+
     </style>
 </head>
 <body>
@@ -71,6 +73,8 @@
     <div class="text-center">
     <p>注文ありがとうございました。</p>
     </div>
+
+
 </main>
 <footer>
 </footer>

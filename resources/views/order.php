@@ -78,7 +78,7 @@
         住所<br><input type="text" name="address" value="<?=$inputs["address"]??''?>" required><br>
         電話番号<br><input type="text" name="tel" value="<?=$inputs["tel"]??''?>" required><br>
         Email<br><input type="text" name="email" value="<?=$inputs["email"]??''?>" required><br>
-        <input type="submit" value="注文" class="btn btn-info my-3">
+        <input type="submit" value="注文" class="btn btn-outline-info my-3">
     </form>
         </div>
     </form>
