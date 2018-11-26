@@ -20,6 +20,13 @@
         .fon{
             font-family: 'Amatic SC', cursive;
         }
+        a:visited{
+        color:#5c626e;
+        text-decoration:none;
+        }
+        .cl{
+            color: black;
+        }
     </style>
 </head>
 <body>
@@ -28,7 +35,7 @@
         <header class="site-navbar" role="banner">
             <div class="site-navbar-top">
                 <div class="container">
-                    <div class="row align-items-center">
+                    <div class="row ">
 
 
                         <div class="col-6 col-md-4 order-2 order-md-1 site-search-icon text-left">
@@ -69,18 +76,17 @@
 </body>
 <main>
     <section class="py-5">
-        <h2 class="text-center mb-5">商品一覧</h2>
+        <h2 class="text-center mb-5 cl">商品一覧</h2>
         <div class="container">
-            <div>
 
             <?php
             foreach($items as $item): ?>
-            <div class="card float-left m-3" style="width: 18rem;">
-                <img class="card-img-top" src="<?=$item->img?>" alt="Card image cap">
-                <div class="card-body">
-                    <p class="card-text"><a href="item/<?=$item->id?>"><?=$item->name?></a><br><?=$item->price?>円</p>
+                <div class="card float-left m-3" style="width: 18rem;">
+                    <img class="card-img-top" src="<?=$item->img?>" alt="Card image cap">
+                    <div class="card-body">
+                        <p class="card-text t"><a href="item/<?=$item->id?>"><?=$item->name?></a><br><?=$item->price?>円</p>
+                    </div>
                 </div>
-            </div>
             <?php endforeach; ?>
             </div>
         </div>

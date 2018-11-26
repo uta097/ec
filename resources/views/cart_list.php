@@ -20,6 +20,9 @@
         .fon{
             font-family: 'Amatic SC', cursive;
         }
+        .cl{
+            color: black;
+        }
     </style>
 </head>
 <body>
@@ -68,16 +71,19 @@
 </div>
 </body>
 <main>
-    <div class="text-center h2 py-5">カート一覧</div>
+    <div class="text-center h2 py-5 cl">カート一覧</div>
 <?php
-foreach($cartItems as $item): ?>
+foreach((array)$cartItems as $item): ?>
     <div class="text-center">
         <?=$item->name?>
         価格：<?=$item->price?>円
         <br>
-        <br>
     </div>
 <?php endforeach; ?>
+
+
+
+
     <form action="/cart/clear" method="post">
         <?= csrf_field()?>
         <input type="hidden" name="item_id" value="<?=$item->id?>">

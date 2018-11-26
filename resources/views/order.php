@@ -20,11 +20,14 @@
         .fon{
             font-family: 'Amatic SC', cursive;
         }
+        .cl{
+            color: black;
+        }
     </style>
 </head>
 <body>
 
-<div class="site-wrap">
+<div class="site-wrap ">
     <header class="site-navbar" role="banner">
         <div class="site-navbar-top">
             <div class="container">
@@ -68,16 +71,16 @@
 </div>
 </body>
 <main>
-<div class="container">
-    <div class=" p-3">
+<div class="container cl">
+    <div class=" p-3 ">
         <h2>注文情報入力画面</h2>
     </div>
     <form action="/order" method="POST">
         <?=csrf_field()?>
-        名前<br><input type="text" name="name" value="<?=$inputs["name"]??''?>" required><br>
-        住所<br><input type="text" name="address" value="<?=$inputs["address"]??''?>" required><br>
-        電話番号<br><input type="text" name="tel" value="<?=$inputs["tel"]??''?>" required><br>
-        Email<br><input type="text" name="email" value="<?=$inputs["email"]??''?>" required><br>
+        名前<br><input type="text" name="name" value="<?=$inputs["name"]??''?>" placeholder="name" required><br>
+        住所<br><input type="text" name="address" value="<?=$inputs["address"]??''?>"  placeholder="adress" required><br>
+        電話番号<br><input type="text" name="tel" value="<?=$inputs["tel"]??''?>" placeholder="tel" required><br>
+        Email<br><input type="text" name="email" value="<?=$inputs["email"]??''?>"  placeholder="email" required><br>
         <input type="submit" value="注文" class="btn btn-outline-info my-3">
     </form>
         </div>
