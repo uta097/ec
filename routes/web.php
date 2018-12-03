@@ -11,16 +11,9 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
-Route::get("/",function(){
-    $items = DB::select("SELECT * FROM items");
-    return view("items",[
-        "items" => $items
-    ]);
-});
+
+
 
 Route::get("/item/{id}",function($id){
     $items = DB::select("SELECT * FROM items where id = ?",[$id]);
@@ -112,6 +105,19 @@ Route::post("/order",function(){
     session()->forget("CART_ITEMS"); // ここでカートを空に
 
     return redirect("/order/thanks");
+});
+
+Route::get("/",function(){
+    $searchKey = request()->get("searchkey");
+    if($searchKey){
+        $items = DB::select("select * from items where name like ?",["%$searchKey%"]);
+    }else{
+        $items = DB::select("select * from items");
+    }
+    return view("items", [
+        "items" => $items,
+        "searchKey" => $searchKey
+    ]);
 });
 
 

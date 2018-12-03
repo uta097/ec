@@ -72,28 +72,24 @@
 </body>
 <main>
     <div class="text-center h2 py-5 cl">カート一覧</div>
+
 <?php
 foreach((array)$cartItems as $item): ?>
     <div class="text-center">
-        <?=$item->name?>
-        価格：<?=$item->price?>円
-        <br>
+    <?=$item->name?>
+    <?=$item->price?>円<br>
     </div>
 <?php endforeach; ?>
 
-
-
-
+    <div class="text-center">
     <form action="/cart/clear" method="post">
         <?= csrf_field()?>
-        <input type="hidden" name="item_id" value="<?=$item->id?>">
-        <br>
-        <div class="text-center">
-
+        <input type="hidden" name="item_id" value="<?=$item->id?>"><br>
         <input type="submit" value="カートを全削除" class="btn btn-outline-danger" ><br><br>
-            <a class="btn btn-outline-info px-5" href="/order">購入画面に進む</a>
-        </div>
     </form>
+        <a class="btn btn-outline-info px-5" href="/order">購入画面に進む</a>
+
+    </div>
 </main>
 <footer>
 </footer>
