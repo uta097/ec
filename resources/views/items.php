@@ -41,7 +41,7 @@
                         <div class="col-6 col-md-4 order-2 order-md-1 site-search-icon text-left">
                             <form action="/" method="GET">
                                 <span class="icon icon-search2"></span>
-                                <input type="text" class="form-control border-0" placeholder="Search" name="searchkey" value="<?=$searchKey?>">
+                                <input type="text" class="form-control border-0" placeholder="Search" name="searchkey" value="<?= $searchKey?>">
                             </form>
                         </div>
 
@@ -84,7 +84,7 @@
                 <div class="card float-left m-3" style="width: 18rem;">
                     <img class="card-img-top" src="<?=$item->img?>" alt="Card image cap">
                     <div class="card-body">
-                        <p class="card-text t"><a href="item/<?=$item->id?>"><?=$item->name?></a><br><?=$item->price?>円</p>
+                        <p class="card-text"><a href="item/<?=$item->id?>"><?=$item->name?></a><br><?=$item->price?>円</p>
                     </div>
                 </div>
             <?php endforeach; ?>

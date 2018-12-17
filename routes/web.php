@@ -41,6 +41,7 @@ Route::get("/cart/list",function(){
 
     return view("cart_list", [
         "cartItems" => $cartItems
+
     ]);
 });
 
@@ -121,3 +122,9 @@ Route::get("/",function(){
 });
 
 
+Route::get('/cart/delete', function(Request $request){
+    $index = $request->get("item_id"); //削除したい商品のindexを取得
+    $cart = new Cart();
+    $cart->removeItem($index);
+    return redirect("/cart_list");
+});
